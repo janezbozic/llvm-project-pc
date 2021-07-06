@@ -1,0 +1,39 @@
+/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/DataLinux/diploma/llvm-project/llvm
+-- Could NOT find ZLIB (missing: ZLIB_LIBRARY ZLIB_INCLUDE_DIR) 
+-- Could NOT find LibXml2 (missing: LIBXML2_LIBRARY LIBXML2_INCLUDE_DIR) 
+-- Native target architecture is X86
+-- Threads enabled.
+-- Doxygen disabled.
+-- Go bindings disabled.
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- OCaml bindings disabled.
+-- LLVM host triple: x86_64-unknown-linux-gnu
+-- LLVM default target triple: x86_64-unknown-linux-gnu
+-- Building with -fPIC
+-- Targeting AArch64
+-- Targeting AMDGPU
+-- Targeting ARM
+-- Targeting AVR
+-- Targeting BPF
+-- Targeting Hexagon
+-- Targeting Lanai
+-- Targeting Mips
+-- Targeting MSP430
+-- Targeting NVPTX
+-- Targeting PowerPC
+-- Targeting RISCV
+-- Targeting Sparc
+-- Targeting SystemZ
+-- Targeting WebAssembly
+-- Targeting X86
+-- Targeting XCore
+-- Registering Bye as a pass plugin (static build: OFF)
+-- Failed to find LLVM FileCheck
+-- Version: 0.0.0
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK -- success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug

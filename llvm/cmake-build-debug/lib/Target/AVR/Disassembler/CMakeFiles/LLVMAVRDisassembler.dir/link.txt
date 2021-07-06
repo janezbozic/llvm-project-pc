@@ -1,0 +1,2 @@
+/usr/bin/ar Dqc ../../../libLLVMAVRDisassembler.a CMakeFiles/LLVMAVRDisassembler.dir/AVRDisassembler.cpp.o
+/usr/bin/ranlib -D ../../../libLLVMAVRDisassembler.a

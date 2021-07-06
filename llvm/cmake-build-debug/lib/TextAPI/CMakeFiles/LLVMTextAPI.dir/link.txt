@@ -1,0 +1,2 @@
+/usr/bin/ar Dqc ../libLLVMTextAPI.a CMakeFiles/LLVMTextAPI.dir/Architecture.cpp.o CMakeFiles/LLVMTextAPI.dir/ArchitectureSet.cpp.o CMakeFiles/LLVMTextAPI.dir/InterfaceFile.cpp.o CMakeFiles/LLVMTextAPI.dir/PackedVersion.cpp.o CMakeFiles/LLVMTextAPI.dir/Platform.cpp.o CMakeFiles/LLVMTextAPI.dir/Symbol.cpp.o CMakeFiles/LLVMTextAPI.dir/Target.cpp.o CMakeFiles/LLVMTextAPI.dir/TextStub.cpp.o CMakeFiles/LLVMTextAPI.dir/TextStubCommon.cpp.o
+/usr/bin/ranlib -D ../libLLVMTextAPI.a

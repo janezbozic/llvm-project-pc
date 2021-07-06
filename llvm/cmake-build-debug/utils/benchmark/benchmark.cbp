@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="benchmark"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\include\;CMake Files\include\llvm\;CMake Files\include\llvm\Config\;CMake Files\include\llvm\IR\;CMake Files\include\llvm\Support\;CMake Files\include\llvm\Frontend\;CMake Files\include\llvm\Frontend\OpenACC\;CMake Files\include\llvm\Frontend\OpenMP\;CMake Files\lib\;CMake Files\lib\Demangle\;CMake Files\lib\Support\;CMake Files\lib\TableGen\;CMake Files\lib\IR\;CMake Files\lib\FuzzMutate\;CMake Files\lib\FileCheck\;CMake Files\lib\InterfaceStub\;CMake Files\lib\IRReader\;CMake Files\lib\CodeGen\;CMake Files\lib\CodeGen\SelectionDAG\;CMake Files\lib\CodeGen\AsmPrinter\;CMake Files\lib\CodeGen\MIRParser\;CMake Files\lib\CodeGen\GlobalISel\;CMake Files\lib\BinaryFormat\;CMake Files\lib\Bitcode\;CMake Files\lib\Bitcode\Reader\;CMake Files\lib\Bitcode\Writer\;CMake Files\lib\Bitstream\;CMake Files\lib\Bitstream\Reader\;CMake Files\lib\DWARFLinker\;CMake Files\lib\Extensions\;CMake Files\lib\Frontend\;CMake Files\lib\Frontend\OpenACC\;CMake Files\lib\Frontend\OpenMP\;CMake Files\lib\Transforms\;CMake Files\lib\Transforms\Utils\;CMake Files\lib\Transforms\Instrumentation\;CMake Files\lib\Transforms\AggressiveInstCombine\;CMake Files\lib\Transforms\InstCombine\;CMake Files\lib\Transforms\Scalar\;CMake Files\lib\Transforms\IPO\;CMake Files\lib\Transforms\Vectorize\;CMake Files\lib\Transforms\Hello\;CMake Files\lib\Transforms\ObjCARC\;CMake Files\lib\Transforms\Coroutines\;CMake Files\lib\Transforms\CFGuard\;CMake Files\lib\Transforms\LoopPerfEXT\;CMake Files\lib\Linker\;CMake Files\lib\Analysis\;CMake Files\lib\LTO\;CMake Files\lib\MC\;CMake Files\lib\MC\MCParser\;CMake Files\lib\MC\MCDisassembler\;CMake Files\lib\MCA\;CMake Files\lib\Object\;CMake Files\lib\ObjectYAML\;CMake Files\lib\Option\;CMake Files\lib\Remarks\;CMake Files\lib\DebugInfo\;CMake Files\lib\DebugInfo\DWARF\;CMake Files\lib\DebugInfo\GSYM\;CMake Files\lib\DebugInfo\MSF\;CMake Files\lib\DebugInfo\CodeView\;CMake Files\lib\DebugInfo\PDB\;CMake Files\lib\DebugInfo\Symbolize\;CMake Files\lib\ExecutionEngine\;CMake Files\lib\ExecutionEngine\Interpreter\;CMake Files\lib\ExecutionEngine\JITLink\;CMake Files\lib\ExecutionEngine\MCJIT\;CMake Files\lib\ExecutionEngine\Orc\;CMake Files\lib\ExecutionEngine\Orc\Shared\;CMake Files\lib\ExecutionEngine\Orc\TargetProcess\;CMake Files\lib\ExecutionEngine\RuntimeDyld\;CMake Files\lib\Target\;CMake Files\lib\Target\AArch64\;CMake Files\lib\Target\AArch64\AsmParser\;CMake Files\lib\Target\AArch64\Disassembler\;CMake Files\lib\Target\AArch64\MCTargetDesc\;CMake Files\lib\Target\AArch64\TargetInfo\;CMake Files\lib\Target\AArch64\Utils\;CMake Files\lib\Target\AMDGPU\;CMake Files\lib\Target\AMDGPU\AsmParser\;CMake Files\lib\Target\AMDGPU\Disassembler\;CMake Files\lib\Target\AMDGPU\MCTargetDesc\;CMake Files\lib\Target\AMDGPU\TargetInfo\;CMake Files\lib\Target\AMDGPU\Utils\;CMake Files\lib\Target\ARM\;CMake Files\lib\Target\ARM\AsmParser\;CMake Files\lib\Target\ARM\Disassembler\;CMake Files\lib\Target\ARM\MCTargetDesc\;CMake Files\lib\Target\ARM\TargetInfo\;CMake Files\lib\Target\ARM\Utils\;CMake Files\lib\Target\AVR\;CMake Files\lib\Target\AVR\AsmParser\;CMake Files\lib\Target\AVR\Disassembler\;CMake Files\lib\Target\AVR\MCTargetDesc\;CMake Files\lib\Target\AVR\TargetInfo\;CMake Files\lib\Target\BPF\;CMake Files\lib\Target\BPF\AsmParser\;CMake Files\lib\Target\BPF\Disassembler\;CMake Files\lib\Target\BPF\MCTargetDesc\;CMake Files\lib\Target\BPF\TargetInfo\;CMake Files\lib\Target\Hexagon\;CMake Files\lib\Target\Hexagon\AsmParser\;CMake Files\lib\Target\Hexagon\Disassembler\;CMake Files\lib\Target\Hexagon\MCTargetDesc\;CMake Files\lib\Target\Hexagon\TargetInfo\;CMake Files\lib\Target\Lanai\;CMake Files\lib\Target\Lanai\AsmParser\;CMake Files\lib\Target\Lanai\Disassembler\;CMake Files\lib\Target\Lanai\MCTargetDesc\;CMake Files\lib\Target\Lanai\TargetInfo\;CMake Files\lib\Target\Mips\;CMake Files\lib\Target\Mips\AsmParser\;CMake Files\lib\Target\Mips\Disassembler\;CMake Files\lib\Target\Mips\MCTargetDesc\;CMake Files\lib\Target\Mips\TargetInfo\;CMake Files\lib\Target\MSP430\;CMake Files\lib\Target\MSP430\MCTargetDesc\;CMake Files\lib\Target\MSP430\TargetInfo\;CMake Files\lib\Target\MSP430\AsmParser\;CMake Files\lib\Target\MSP430\Disassembler\;CMake Files\lib\Target\NVPTX\;CMake Files\lib\Target\NVPTX\MCTargetDesc\;CMake Files\lib\Target\NVPTX\TargetInfo\;CMake Files\lib\Target\PowerPC\;CMake Files\lib\Target\PowerPC\AsmParser\;CMake Files\lib\Target\PowerPC\Disassembler\;CMake Files\lib\Target\PowerPC\MCTargetDesc\;CMake Files\lib\Target\PowerPC\TargetInfo\;CMake Files\lib\Target\RISCV\;CMake Files\lib\Target\RISCV\AsmParser\;CMake Files\lib\Target\RISCV\Disassembler\;CMake Files\lib\Target\RISCV\MCTargetDesc\;CMake Files\lib\Target\RISCV\TargetInfo\;CMake Files\lib\Target\Sparc\;CMake Files\lib\Target\Sparc\AsmParser\;CMake Files\lib\Target\Sparc\Disassembler\;CMake Files\lib\Target\Sparc\MCTargetDesc\;CMake Files\lib\Target\Sparc\TargetInfo\;CMake Files\lib\Target\SystemZ\;CMake Files\lib\Target\SystemZ\AsmParser\;CMake Files\lib\Target\SystemZ\Disassembler\;CMake Files\lib\Target\SystemZ\MCTargetDesc\;CMake Files\lib\Target\SystemZ\TargetInfo\;CMake Files\lib\Target\WebAssembly\;CMake Files\lib\Target\WebAssembly\AsmParser\;CMake Files\lib\Target\WebAssembly\Disassembler\;CMake Files\lib\Target\WebAssembly\MCTargetDesc\;CMake Files\lib\Target\WebAssembly\TargetInfo\;CMake Files\lib\Target\WebAssembly\Utils\;CMake Files\lib\Target\X86\;CMake Files\lib\Target\X86\AsmParser\;CMake Files\lib\Target\X86\Disassembler\;CMake Files\lib\Target\X86\MCTargetDesc\;CMake Files\lib\Target\X86\TargetInfo\;CMake Files\lib\Target\XCore\;CMake Files\lib\Target\XCore\Disassembler\;CMake Files\lib\Target\XCore\MCTargetDesc\;CMake Files\lib\Target\XCore\TargetInfo\;CMake Files\lib\AsmParser\;CMake Files\lib\LineEditor\;CMake Files\lib\ProfileData\;CMake Files\lib\ProfileData\Coverage\;CMake Files\lib\Passes\;CMake Files\lib\TextAPI\;CMake Files\lib\ToolDrivers\;CMake Files\lib\ToolDrivers\llvm-dlltool\;CMake Files\lib\ToolDrivers\llvm-lib\;CMake Files\lib\XRay\;CMake Files\lib\Testing\;CMake Files\lib\Testing\Support\;CMake Files\lib\WindowsManifest\;CMake Files\utils\;CMake Files\utils\TableGen\;CMake Files\utils\TableGen\GlobalISel\;CMake Files\utils\FileCheck\;CMake Files\utils\PerfectShuffle\;CMake Files\utils\count\;CMake Files\utils\not\;CMake Files\utils\yaml-bench\;CMake Files\utils\lit\;CMake Files\utils\lit\tests\;CMake Files\utils\unittest\;CMake Files\utils\unittest\UnitTestMain\;CMake Files\utils\llvm-lit\;CMake Files\utils\benchmark\;CMake Files\utils\benchmark\cmake\;CMake Files\utils\benchmark\src\;CMake Files\utils\llvm-locstats\;CMake Files\projects\;CMake Files\tools\;CMake Files\tools\lto\;CMake Files\tools\gold\;CMake Files\tools\llvm-ar\;CMake Files\tools\llvm-config\;CMake Files\tools\llvm-lto\;CMake Files\tools\llvm-profdata\;CMake Files\tools\bugpoint\;CMake Files\tools\bugpoint-passes\;CMake Files\tools\dsymutil\;CMake Files\tools\llc\;CMake Files\tools\lli\;CMake Files\tools\lli\ChildTarget\;CMake Files\tools\llvm-as\;CMake Files\tools\llvm-as-fuzzer\;CMake Files\tools\llvm-bcanalyzer\;CMake Files\tools\llvm-c-test\;CMake Files\tools\llvm-cat\;CMake Files\tools\llvm-cfi-verify\;CMake Files\tools\llvm-cfi-verify\lib\;CMake Files\tools\llvm-cov\;CMake Files\tools\llvm-cvtres\;CMake Files\tools\llvm-cxxdump\;CMake Files\tools\llvm-cxxfilt\;CMake Files\tools\llvm-cxxmap\;CMake Files\tools\llvm-diff\;CMake Files\tools\llvm-dis\;CMake Files\tools\llvm-dwarfdump\;CMake Files\tools\llvm-dwarfdump\fuzzer\;CMake Files\tools\llvm-dwp\;CMake Files\tools\llvm-elfabi\;CMake Files\tools\llvm-exegesis\;CMake Files\tools\llvm-exegesis\lib\;CMake Files\tools\llvm-exegesis\lib\X86\;CMake Files\tools\llvm-exegesis\lib\AArch64\;CMake Files\tools\llvm-exegesis\lib\PowerPC\;CMake Files\tools\llvm-exegesis\lib\Mips\;CMake Files\tools\llvm-extract\;CMake Files\tools\llvm-go\;CMake Files\tools\llvm-gsymutil\;CMake Files\tools\llvm-ifs\;CMake Files\tools\llvm-isel-fuzzer\;CMake Files\tools\llvm-itanium-demangle-fuzzer\;CMake Files\tools\llvm-jitlink\;CMake Files\tools\llvm-jitlink\llvm-jitlink-executor\;CMake Files\tools\llvm-libtool-darwin\;CMake Files\tools\llvm-link\;CMake Files\tools\llvm-lipo\;CMake Files\tools\llvm-lto2\;CMake Files\tools\llvm-mc\;CMake Files\tools\llvm-mc-assemble-fuzzer\;CMake Files\tools\llvm-mc-disassemble-fuzzer\;CMake Files\tools\llvm-mca\;CMake Files\tools\llvm-microsoft-demangle-fuzzer\;CMake Files\tools\llvm-ml\;CMake Files\tools\llvm-modextract\;CMake Files\tools\llvm-mt\;CMake Files\tools\llvm-nm\;CMake Files\tools\llvm-objcopy\;CMake Files\tools\llvm-objdump\;CMake Files\tools\llvm-opt-fuzzer\;CMake Files\tools\llvm-opt-report\;CMake Files\tools\llvm-pdbutil\;CMake Files\tools\llvm-profgen\;CMake Files\tools\llvm-rc\;CMake Files\tools\llvm-readobj\;CMake Files\tools\llvm-reduce\;CMake Files\tools\llvm-rtdyld\;CMake Files\tools\llvm-rust-demangle-fuzzer\;CMake Files\tools\llvm-size\;CMake Files\tools\llvm-special-case-list-fuzzer\;CMake Files\tools\llvm-split\;CMake Files\tools\llvm-stress\;CMake Files\tools\llvm-strings\;CMake Files\tools\llvm-symbolizer\;CMake Files\tools\llvm-undname\;CMake Files\tools\llvm-xray\;CMake Files\tools\llvm-yaml-numeric-parser-fuzzer\;CMake Files\tools\llvm-yaml-parser-fuzzer\;CMake Files\tools\obj2yaml\;CMake Files\tools\opt\;CMake Files\tools\opt-viewer\;CMake Files\tools\remarks-shlib\;CMake Files\tools\sancov\;CMake Files\tools\sanstats\;CMake Files\tools\split-file\;CMake Files\tools\verify-uselistorder\;CMake Files\tools\vfabi-demangle-fuzzer\;CMake Files\tools\xcode-toolchain\;CMake Files\tools\yaml2obj\;CMake Files\runtimes\;CMake Files\examples\;CMake Files\examples\BrainF\;CMake Files\examples\Fibonacci\;CMake Files\examples\HowToUseJIT\;CMake Files\examples\HowToUseLLJIT\;CMake Files\examples\IRTransforms\;CMake Files\examples\Kaleidoscope\;CMake Files\examples\Kaleidoscope\BuildingAJIT\;CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter1\;CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter2\;CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter3\;CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter4\;CMake Files\examples\Kaleidoscope\Chapter2\;CMake Files\examples\Kaleidoscope\Chapter3\;CMake Files\examples\Kaleidoscope\Chapter4\;CMake Files\examples\Kaleidoscope\Chapter5\;CMake Files\examples\Kaleidoscope\Chapter6\;CMake Files\examples\Kaleidoscope\Chapter7\;CMake Files\examples\Kaleidoscope\Chapter8\;CMake Files\examples\Kaleidoscope\Chapter9\;CMake Files\examples\ModuleMaker\;CMake Files\examples\OrcV2Examples\;CMake Files\examples\OrcV2Examples\LLJITDumpObjects\;CMake Files\examples\OrcV2Examples\LLJITWithCustomObjectLinkingLayer\;CMake Files\examples\OrcV2Examples\LLJITWithGDBRegistrationListener\;CMake Files\examples\OrcV2Examples\LLJITWithInitializers\;CMake Files\examples\OrcV2Examples\LLJITWithLazyReexports\;CMake Files\examples\OrcV2Examples\LLJITWithObjectCache\;CMake Files\examples\OrcV2Examples\LLJITWithObjectLinkingLayerPlugin\;CMake Files\examples\OrcV2Examples\LLJITWithOptimizingIRTransform\;CMake Files\examples\OrcV2Examples\LLJITWithTargetProcessControl\;CMake Files\examples\OrcV2Examples\LLJITWithThinLTOSummaries\;CMake Files\examples\OrcV2Examples\OrcV2CBindingsAddObjectFile\;CMake Files\examples\OrcV2Examples\OrcV2CBindingsBasicUsage\;CMake Files\examples\OrcV2Examples\OrcV2CBindingsReflectProcessSymbols\;CMake Files\examples\OrcV2Examples\OrcV2CBindingsRemovableCode\;CMake Files\examples\OrcV2Examples\LLJITWithRemoteDebugging\;CMake Files\examples\SpeculativeJIT\;CMake Files\examples\Bye\;CMake Files\examples\ParallelJIT\;CMake Files\test\;CMake Files\test\Unit\;CMake Files\unittests\;CMake Files\unittests\ADT\;CMake Files\unittests\Analysis\;CMake Files\unittests\AsmParser\;CMake Files\unittests\BinaryFormat\;CMake Files\unittests\Bitcode\;CMake Files\unittests\Bitstream\;CMake Files\unittests\CodeGen\;CMake Files\unittests\CodeGen\GlobalISel\;CMake Files\unittests\DebugInfo\;CMake Files\unittests\DebugInfo\CodeView\;CMake Files\unittests\DebugInfo\DWARF\;CMake Files\unittests\DebugInfo\GSYM\;CMake Files\unittests\DebugInfo\MSF\;CMake Files\unittests\DebugInfo\PDB\;CMake Files\unittests\Demangle\;CMake Files\unittests\ExecutionEngine\;CMake Files\unittests\ExecutionEngine\JITLink\;CMake Files\unittests\ExecutionEngine\Orc\;CMake Files\unittests\ExecutionEngine\MCJIT\;CMake Files\unittests\FileCheck\;CMake Files\unittests\Frontend\;CMake Files\unittests\FuzzMutate\;CMake Files\unittests\InterfaceStub\;CMake Files\unittests\IR\;CMake Files\unittests\LineEditor\;CMake Files\unittests\Linker\;CMake Files\unittests\MC\;CMake Files\unittests\MC\AMDGPU\;CMake Files\unittests\MC\SystemZ\;CMake Files\unittests\MI\;CMake Files\unittests\Object\;CMake Files\unittests\ObjectYAML\;CMake Files\unittests\Option\;CMake Files\unittests\Remarks\;CMake Files\unittests\Passes\;CMake Files\unittests\ProfileData\;CMake Files\unittests\Support\;CMake Files\unittests\Support\DynamicLibrary\;CMake Files\unittests\TableGen\;CMake Files\unittests\Target\;CMake Files\unittests\Target\AArch64\;CMake Files\unittests\Target\AMDGPU\;CMake Files\unittests\Target\ARM\;CMake Files\unittests\Target\PowerPC\;CMake Files\unittests\Target\WebAssembly\;CMake Files\unittests\Target\X86\;CMake Files\unittests\TextAPI\;CMake Files\unittests\Transforms\;CMake Files\unittests\Transforms\IPO\;CMake Files\unittests\Transforms\Scalar\;CMake Files\unittests\Transforms\Utils\;CMake Files\unittests\Transforms\Vectorize\;CMake Files\unittests\XRay\;CMake Files\unittests\tools\;CMake Files\unittests\tools\llvm-cfi-verify\;CMake Files\unittests\tools\llvm-exegesis\;CMake Files\unittests\tools\llvm-exegesis\X86\;CMake Files\unittests\tools\llvm-exegesis\ARM\;CMake Files\unittests\tools\llvm-exegesis\AArch64\;CMake Files\unittests\tools\llvm-exegesis\PowerPC\;CMake Files\unittests\tools\llvm-exegesis\Mips\;CMake Files\unittests\tools\llvm-profgen\;CMake Files\docs\;CMake Files\benchmarks\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchmark">
+				<Option output="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/lib/libbenchmark.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GNU_SOURCE"/>
+					<Add option="-D_DEBUG"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-DHAVE_STD_REGEX"/>
+					<Add option="-DHAVE_POSIX_REGEX"/>
+					<Add option="-DHAVE_STEADY_CLOCK"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/../include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 benchmark"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchmark/fast">
+				<Option output="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/lib/libbenchmark.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GNU_SOURCE"/>
+					<Add option="-D_DEBUG"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-DHAVE_STD_REGEX"/>
+					<Add option="-DHAVE_POSIX_REGEX"/>
+					<Add option="-DHAVE_STEADY_CLOCK"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/../include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 benchmark/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchmark_main">
+				<Option output="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/lib/libbenchmark_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GNU_SOURCE"/>
+					<Add option="-D_DEBUG"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-DHAVE_STD_REGEX"/>
+					<Add option="-DHAVE_POSIX_REGEX"/>
+					<Add option="-DHAVE_STEADY_CLOCK"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/../include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 benchmark_main"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="benchmark_main/fast">
+				<Option output="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/lib/libbenchmark_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GNU_SOURCE"/>
+					<Add option="-D_DEBUG"/>
+					<Add option="-D__STDC_CONSTANT_MACROS"/>
+					<Add option="-D__STDC_FORMAT_MACROS"/>
+					<Add option="-D__STDC_LIMIT_MACROS"/>
+					<Add option="-DHAVE_STD_REGEX"/>
+					<Add option="-DHAVE_POSIX_REGEX"/>
+					<Add option="-DHAVE_STEADY_CLOCK"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/include"/>
+					<Add directory="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/../include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 benchmark_main/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/DataLinux/diploma/llvm-project/llvm/cmake-build-debug/utils/benchmark/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/include/benchmark/benchmark.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/arraysize.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/benchmark.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/benchmark_api_internal.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/benchmark_main.cc">
+			<Option target="benchmark_main"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/benchmark_register.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/benchmark_register.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/check.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/colorprint.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/colorprint.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/commandlineflags.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/commandlineflags.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/complexity.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/complexity.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/console_reporter.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/counter.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/counter.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/csv_reporter.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/cycleclock.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/internal_macros.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/json_reporter.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/log.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/mutex.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/re.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/reporter.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/sleep.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/sleep.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/statistics.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/statistics.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/string_util.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/string_util.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/sysinfo.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/thread_manager.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/thread_timer.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/timers.cc">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/timers.h">
+			<Option target="benchmark"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/llvm.spec.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/config-ix.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/AddLLVM.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/AddOCaml.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/CheckAtomic.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/CheckCompilerVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/DetermineGCCCompatible.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/FindLibpfm.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/FindOCaml.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/GetErrcMessages.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/GetHostTriple.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/GetLibraryName.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/HandleLLVMOptions.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/HandleLLVMStdlib.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVM-Build.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVM-Config.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVMCheckLinkerFlag.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVMConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVMConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVMDistributionSupport.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVMExternalProjectUtils.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/LLVMProcessSources.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/TableGen.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/cmake/modules/VersionFromVCS.cmake">
+			<Option virtualFolder="CMake Files\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\llvm\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/module.modulemap.build">
+			<Option virtualFolder="CMake Files\include\llvm\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/AsmParsers.def.in">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/AsmPrinters.def.in">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/Disassemblers.def.in">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/Targets.def.in">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/abi-breaking.h.cmake">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/config.h.cmake">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Config/llvm-config.h.cmake">
+			<Option virtualFolder="CMake Files\include\llvm\Config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/IR/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\llvm\IR\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Support/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\llvm\Support\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Frontend/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\llvm\Frontend\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Frontend/OpenACC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\llvm\Frontend\OpenACC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/include/llvm/Frontend/OpenMP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\llvm\Frontend\OpenMP\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Demangle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Demangle\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Support/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Support\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/TableGen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\TableGen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/IR/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\IR\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/FuzzMutate/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\FuzzMutate\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/FileCheck/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\FileCheck\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/InterfaceStub/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\InterfaceStub\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/IRReader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\IRReader\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/CodeGen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\CodeGen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/CodeGen/SelectionDAG/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\CodeGen\SelectionDAG\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/CodeGen/AsmPrinter/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\CodeGen\AsmPrinter\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/CodeGen/MIRParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\CodeGen\MIRParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/CodeGen/GlobalISel/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\CodeGen\GlobalISel\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/BinaryFormat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\BinaryFormat\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Bitcode/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Bitcode\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Bitcode/Reader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Bitcode\Reader\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Bitcode/Writer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Bitcode\Writer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Bitstream/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Bitstream\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Bitstream/Reader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Bitstream\Reader\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DWARFLinker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DWARFLinker\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Extensions/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Extensions\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Frontend/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Frontend\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Frontend/OpenACC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Frontend\OpenACC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Frontend/OpenMP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Frontend\OpenMP\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/Utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\Utils\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/Instrumentation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\Instrumentation\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/AggressiveInstCombine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\AggressiveInstCombine\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/InstCombine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\InstCombine\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/Scalar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\Scalar\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/IPO/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\IPO\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/Vectorize/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\Vectorize\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/Hello/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\Hello\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/ObjCARC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\ObjCARC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/Coroutines/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\Coroutines\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/CFGuard/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\CFGuard\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Transforms/LoopPerfEXT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Transforms\LoopPerfEXT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Linker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Linker\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Analysis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Analysis\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/LTO/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\LTO\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/MC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\MC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/MC/MCParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\MC\MCParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/MC/MCDisassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\MC\MCDisassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/MCA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\MCA\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Object/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Object\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ObjectYAML/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ObjectYAML\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Option/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Option\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Remarks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Remarks\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/DWARF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\DWARF\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/GSYM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\GSYM\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/MSF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\MSF\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/CodeView/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\CodeView\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/PDB/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\PDB\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/DebugInfo/Symbolize/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\DebugInfo\Symbolize\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/Interpreter/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\Interpreter\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/JITLink/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\JITLink\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/MCJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\MCJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/Orc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\Orc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/Orc/Shared/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\Orc\Shared\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/Orc/TargetProcess/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\Orc\TargetProcess\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ExecutionEngine/RuntimeDyld/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ExecutionEngine\RuntimeDyld\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AArch64/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AArch64\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AArch64/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AArch64\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AArch64/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AArch64\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AArch64/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AArch64\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AArch64/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AArch64\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AArch64/Utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AArch64\Utils\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AMDGPU/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AMDGPU\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AMDGPU/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AMDGPU\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AMDGPU/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AMDGPU\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AMDGPU/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AMDGPU\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AMDGPU/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AMDGPU\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AMDGPU/Utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AMDGPU\Utils\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/ARM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\ARM\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/ARM/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\ARM\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/ARM/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\ARM\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/ARM/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\ARM\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/ARM/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\ARM\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/ARM/Utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\ARM\Utils\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AVR/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AVR\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AVR/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AVR\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AVR/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AVR\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AVR/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AVR\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/AVR/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\AVR\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/BPF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\BPF\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/BPF/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\BPF\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/BPF/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\BPF\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/BPF/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\BPF\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/BPF/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\BPF\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Hexagon/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Hexagon\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Hexagon/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Hexagon\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Hexagon/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Hexagon\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Hexagon/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Hexagon\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Hexagon/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Hexagon\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Lanai/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Lanai\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Lanai/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Lanai\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Lanai/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Lanai\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Lanai/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Lanai\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Lanai/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Lanai\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Mips/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Mips\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Mips/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Mips\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Mips/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Mips\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Mips/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Mips\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Mips/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Mips\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/MSP430/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\MSP430\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/MSP430/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\MSP430\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/MSP430/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\MSP430\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/MSP430/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\MSP430\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/MSP430/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\MSP430\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/NVPTX/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\NVPTX\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/NVPTX/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\NVPTX\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/NVPTX/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\NVPTX\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/PowerPC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\PowerPC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/PowerPC/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\PowerPC\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/PowerPC/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\PowerPC\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/PowerPC/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\PowerPC\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/PowerPC/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\PowerPC\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/RISCV/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\RISCV\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/RISCV/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\RISCV\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/RISCV/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\RISCV\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/RISCV/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\RISCV\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/RISCV/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\RISCV\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Sparc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Sparc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Sparc/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Sparc\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Sparc/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Sparc\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Sparc/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Sparc\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/Sparc/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\Sparc\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/SystemZ/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\SystemZ\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/SystemZ/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\SystemZ\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/SystemZ/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\SystemZ\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/SystemZ/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\SystemZ\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/SystemZ/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\SystemZ\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/WebAssembly/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\WebAssembly\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/WebAssembly/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\WebAssembly\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/WebAssembly/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\WebAssembly\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/WebAssembly/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\WebAssembly\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/WebAssembly/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\WebAssembly\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/WebAssembly/Utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\WebAssembly\Utils\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/X86/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\X86\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/X86/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\X86\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/X86/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\X86\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/X86/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\X86\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/X86/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\X86\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/XCore/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\XCore\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/XCore/Disassembler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\XCore\Disassembler\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/XCore/MCTargetDesc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\XCore\MCTargetDesc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Target/XCore/TargetInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Target\XCore\TargetInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/LineEditor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\LineEditor\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ProfileData/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ProfileData\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ProfileData/Coverage/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ProfileData\Coverage\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Passes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Passes\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/TextAPI/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\TextAPI\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ToolDrivers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ToolDrivers\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ToolDrivers/llvm-dlltool/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ToolDrivers\llvm-dlltool\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/ToolDrivers/llvm-lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\ToolDrivers\llvm-lib\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/XRay/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\XRay\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Testing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Testing\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/Testing/Support/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\Testing\Support\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/lib/WindowsManifest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\WindowsManifest\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/TableGen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\TableGen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/TableGen/GlobalISel/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\TableGen\GlobalISel\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/FileCheck/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\FileCheck\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/PerfectShuffle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\PerfectShuffle\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/count/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\count\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/not/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\not\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/yaml-bench/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\yaml-bench\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/lit/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\lit\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/lit/tests/lit.site.cfg.in">
+			<Option virtualFolder="CMake Files\utils\lit\tests\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/unittest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\unittest\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/unittest/UnitTestMain/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\unittest\UnitTestMain\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/llvm-lit/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\llvm-lit\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/llvm-lit/llvm-lit.in">
+			<Option virtualFolder="CMake Files\utils\llvm-lit\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\benchmark\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/cmake/AddCXXCompilerFlag.cmake">
+			<Option virtualFolder="CMake Files\utils\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/cmake/CXXFeatureCheck.cmake">
+			<Option virtualFolder="CMake Files\utils\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\utils\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/cmake/benchmark.pc.in">
+			<Option virtualFolder="CMake Files\utils\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/benchmark/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\benchmark\src\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/utils/llvm-locstats/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\llvm-locstats\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/projects/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\projects\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/lto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\lto\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/gold/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\gold\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-ar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-ar\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-config/BuildVariables.inc.in">
+			<Option virtualFolder="CMake Files\tools\llvm-config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-config/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-config\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-lto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-lto\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-profdata/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-profdata\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/bugpoint/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\bugpoint\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/bugpoint-passes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\bugpoint-passes\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/dsymutil/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\dsymutil\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/lli/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\lli\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/lli/ChildTarget/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\lli\ChildTarget\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-as/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-as\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-as-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-as-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-bcanalyzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-bcanalyzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-c-test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-c-test\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cat\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cfi-verify/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cfi-verify\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cfi-verify/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cfi-verify\lib\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cov/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cov\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cvtres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cvtres\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cxxdump/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cxxdump\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cxxfilt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cxxfilt\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-cxxmap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-cxxmap\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-diff/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-diff\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-dis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-dis\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-dwarfdump/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-dwarfdump\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-dwarfdump/fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-dwarfdump\fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-dwp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-dwp\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-elfabi/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-elfabi\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-exegesis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-exegesis\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-exegesis/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-exegesis\lib\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-exegesis/lib/X86/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-exegesis\lib\X86\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-exegesis/lib/AArch64/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-exegesis\lib\AArch64\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-exegesis/lib/PowerPC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-exegesis\lib\PowerPC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-exegesis/lib/Mips/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-exegesis\lib\Mips\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-extract/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-extract\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-go/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-go\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-gsymutil/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-gsymutil\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-ifs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-ifs\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-isel-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-isel-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-itanium-demangle-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-itanium-demangle-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-jitlink/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-jitlink\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-jitlink/llvm-jitlink-executor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-jitlink\llvm-jitlink-executor\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-libtool-darwin/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-libtool-darwin\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-link/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-link\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-lipo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-lipo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-lto2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-lto2\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-mc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-mc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-mc-assemble-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-mc-assemble-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-mc-disassemble-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-mc-disassemble-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-mca/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-mca\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-microsoft-demangle-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-microsoft-demangle-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-ml\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-modextract/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-modextract\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-mt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-mt\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-nm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-nm\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-objcopy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-objcopy\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-objdump/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-objdump\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-opt-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-opt-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-opt-report/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-opt-report\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-pdbutil/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-pdbutil\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-profgen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-profgen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-rc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-rc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-readobj/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-readobj\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-reduce/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-reduce\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-rtdyld/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-rtdyld\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-rust-demangle-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-rust-demangle-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-size/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-size\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-special-case-list-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-special-case-list-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-split/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-split\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-stress/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-stress\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-strings/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-strings\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-symbolizer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-symbolizer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-undname/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-undname\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-xray/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-xray\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-yaml-numeric-parser-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-yaml-numeric-parser-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/llvm-yaml-parser-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\llvm-yaml-parser-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/obj2yaml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\obj2yaml\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/opt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\opt\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/opt-viewer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\opt-viewer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/remarks-shlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\remarks-shlib\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/sancov/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\sancov\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/sanstats/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\sanstats\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/split-file/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\split-file\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/verify-uselistorder/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\verify-uselistorder\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/vfabi-demangle-fuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\vfabi-demangle-fuzzer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/xcode-toolchain/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\xcode-toolchain\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/tools/yaml2obj/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\yaml2obj\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/runtimes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\runtimes\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/BrainF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\BrainF\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Fibonacci/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Fibonacci\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/HowToUseJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\HowToUseJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/HowToUseLLJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\HowToUseLLJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/IRTransforms/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\IRTransforms\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/BuildingAJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\BuildingAJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/BuildingAJIT/Chapter1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter1\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/BuildingAJIT/Chapter2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter2\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/BuildingAJIT/Chapter3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter3\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/BuildingAJIT/Chapter4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\BuildingAJIT\Chapter4\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter2\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter3\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter4\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter5\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter6/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter6\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter7/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter7\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter8/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter8\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Kaleidoscope/Chapter9/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Kaleidoscope\Chapter9\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/ModuleMaker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\ModuleMaker\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITDumpObjects/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITDumpObjects\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithCustomObjectLinkingLayer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithCustomObjectLinkingLayer\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithGDBRegistrationListener/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithGDBRegistrationListener\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithInitializers/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithInitializers\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithLazyReexports/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithLazyReexports\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithObjectCache/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithObjectCache\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithObjectLinkingLayerPlugin/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithObjectLinkingLayerPlugin\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithOptimizingIRTransform/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithOptimizingIRTransform\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithTargetProcessControl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithTargetProcessControl\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithThinLTOSummaries/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithThinLTOSummaries\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/OrcV2CBindingsAddObjectFile/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\OrcV2CBindingsAddObjectFile\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/OrcV2CBindingsBasicUsage/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\OrcV2CBindingsBasicUsage\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/OrcV2CBindingsReflectProcessSymbols/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\OrcV2CBindingsReflectProcessSymbols\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/OrcV2CBindingsRemovableCode/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\OrcV2CBindingsRemovableCode\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/OrcV2Examples/LLJITWithRemoteDebugging/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\OrcV2Examples\LLJITWithRemoteDebugging\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/SpeculativeJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\SpeculativeJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/Bye/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\Bye\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/examples/ParallelJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\ParallelJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/test/lit.site.cfg.py.in">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/test/Unit/lit.site.cfg.py.in">
+			<Option virtualFolder="CMake Files\test\Unit\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/unittest.cfg.in">
+			<Option virtualFolder="CMake Files\unittests\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ADT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ADT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Analysis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Analysis\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/AsmParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\AsmParser\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/BinaryFormat/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\BinaryFormat\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Bitcode/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Bitcode\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Bitstream/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Bitstream\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/CodeGen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\CodeGen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/CodeGen/GlobalISel/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\CodeGen\GlobalISel\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/DebugInfo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\DebugInfo\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/DebugInfo/CodeView/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\DebugInfo\CodeView\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/DebugInfo/DWARF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\DebugInfo\DWARF\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/DebugInfo/GSYM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\DebugInfo\GSYM\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/DebugInfo/MSF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\DebugInfo\MSF\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/DebugInfo/PDB/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\DebugInfo\PDB\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Demangle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Demangle\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ExecutionEngine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ExecutionEngine\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ExecutionEngine/JITLink/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ExecutionEngine\JITLink\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ExecutionEngine/Orc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ExecutionEngine\Orc\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ExecutionEngine/MCJIT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ExecutionEngine\MCJIT\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/FileCheck/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\FileCheck\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Frontend/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Frontend\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/FuzzMutate/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\FuzzMutate\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/InterfaceStub/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\InterfaceStub\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/IR/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\IR\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/LineEditor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\LineEditor\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Linker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Linker\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/MC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\MC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/MC/AMDGPU/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\MC\AMDGPU\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/MC/SystemZ/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\MC\SystemZ\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/MI/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\MI\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Object/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Object\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ObjectYAML/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ObjectYAML\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Option/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Option\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Remarks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Remarks\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Passes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Passes\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/ProfileData/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\ProfileData\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Support/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Support\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Support/DynamicLibrary/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Support\DynamicLibrary\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/TableGen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\TableGen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/AArch64/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\AArch64\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/AMDGPU/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\AMDGPU\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/ARM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\ARM\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/PowerPC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\PowerPC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/WebAssembly/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\WebAssembly\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Target/X86/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Target\X86\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/TextAPI/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\TextAPI\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Transforms/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Transforms\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Transforms/IPO/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Transforms\IPO\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Transforms/Scalar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Transforms\Scalar\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Transforms/Utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Transforms\Utils\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/Transforms/Vectorize/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\Transforms\Vectorize\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/XRay/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\XRay\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-cfi-verify/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-cfi-verify\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-exegesis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-exegesis\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-exegesis/X86/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-exegesis\X86\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-exegesis/ARM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-exegesis\ARM\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-exegesis/AArch64/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-exegesis\AArch64\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-exegesis/PowerPC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-exegesis\PowerPC\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-exegesis/Mips/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-exegesis\Mips\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/unittests/tools/llvm-profgen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unittests\tools\llvm-profgen\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/docs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\docs\"/>
+		</Unit>
+		<Unit filename="/mnt/DataLinux/diploma/llvm-project/llvm/benchmarks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\benchmarks\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

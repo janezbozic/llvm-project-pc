@@ -1,0 +1,2 @@
+/usr/bin/ar Dqc ../../../libLLVMWebAssemblyUtils.a CMakeFiles/LLVMWebAssemblyUtils.dir/WebAssemblyUtilities.cpp.o CMakeFiles/LLVMWebAssemblyUtils.dir/WebAssemblyTypeUtilities.cpp.o
+/usr/bin/ranlib -D ../../../libLLVMWebAssemblyUtils.a

@@ -1,0 +1,171 @@
+Performing C SOURCE FILE Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_17e25/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_17e25.dir/build.make CMakeFiles/cmTC_17e25.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17e25.dir/src.c.o
+/usr/bin/cc -DC_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW  -fPIC -Werror=date-time    -Werror -Werror=unguarded-availability-new -o CMakeFiles/cmTC_17e25.dir/src.c.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc1: error: '-Werror=unguarded-availability-new': no option '-Wunguarded-availability-new'
+gmake[1]: *** [CMakeFiles/cmTC_17e25.dir/build.make:85: CMakeFiles/cmTC_17e25.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_17e25/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_40739/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_40739.dir/build.make CMakeFiles/cmTC_40739.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_40739.dir/src.cxx.o
+/usr/bin/c++ -DCXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW  -fPIC -fvisibility-inlines-hidden -Werror=date-time    -Werror -Werror=unguarded-availability-new -std=c++14 -o CMakeFiles/cmTC_40739.dir/src.cxx.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: error: '-Werror=unguarded-availability-new': no option '-Wunguarded-availability-new'
+gmake[1]: *** [CMakeFiles/cmTC_40739.dir/build.make:85: CMakeFiles/cmTC_40739.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_40739/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_05682/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_05682.dir/build.make CMakeFiles/cmTC_05682.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_05682.dir/src.c.o
+/usr/bin/cc -DC_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG  -fPIC -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -Wimplicit-fallthrough    -Werror -Wcovered-switch-default -o CMakeFiles/cmTC_05682.dir/src.c.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-Wcovered-switch-default'; did you mean '-Wno-switch-default'?
+gmake[1]: *** [CMakeFiles/cmTC_05682.dir/build.make:85: CMakeFiles/cmTC_05682.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_05682/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3f76b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3f76b.dir/build.make CMakeFiles/cmTC_3f76b.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3f76b.dir/src.cxx.o
+/usr/bin/c++ -DCXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough    -Werror -Wcovered-switch-default -std=c++14 -o CMakeFiles/cmTC_3f76b.dir/src.cxx.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wcovered-switch-default'; did you mean '-Wno-switch-default'?
+gmake[1]: *** [CMakeFiles/cmTC_3f76b.dir/build.make:85: CMakeFiles/cmTC_3f76b.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_3f76b/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d9c70/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d9c70.dir/build.make CMakeFiles/cmTC_d9c70.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9c70.dir/src.c.o
+/usr/bin/cc -DC_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG  -fPIC -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -Wimplicit-fallthrough    -Werror -Wdelete-non-virtual-dtor -o CMakeFiles/cmTC_d9c70.dir/src.c.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc1: error: command-line option '-Wdelete-non-virtual-dtor' is valid for C++/ObjC++ but not for C [-Werror]
+cc1: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_d9c70.dir/build.make:85: CMakeFiles/cmTC_d9c70.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_d9c70/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WCOMMENT_ALLOWS_LINE_WRAP failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_7cdf8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7cdf8.dir/build.make CMakeFiles/cmTC_7cdf8.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7cdf8.dir/src.c.o
+/usr/bin/cc -DC_WCOMMENT_ALLOWS_LINE_WRAP  -fPIC -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -Wimplicit-fallthrough  -Werror -Wcomment -o CMakeFiles/cmTC_7cdf8.dir/src.c.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:1:1: error: multi-line comment [-Werror=comment]
+    1 | // \
+      | ^
+cc1: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_7cdf8.dir/build.make:85: CMakeFiles/cmTC_7cdf8.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_7cdf8/fast] Error 2
+
+
+Source file was:
+// \
+//
+int main() {return 0;}
+Performing C SOURCE FILE Test C_SUPPORTS_STRING_CONVERSION_FLAG failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c69b6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c69b6.dir/build.make CMakeFiles/cmTC_c69b6.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c69b6.dir/src.c.o
+/usr/bin/cc -DC_SUPPORTS_STRING_CONVERSION_FLAG  -fPIC -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-comment    -Werror -Wstring-conversion -o CMakeFiles/cmTC_c69b6.dir/src.c.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command-line option '-Wstring-conversion'; did you mean '-Wsign-conversion'?
+gmake[1]: *** [CMakeFiles/cmTC_c69b6.dir/build.make:85: CMakeFiles/cmTC_c69b6.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c69b6/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_STRING_CONVERSION_FLAG failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a8fb5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a8fb5.dir/build.make CMakeFiles/cmTC_a8fb5.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a8fb5.dir/src.cxx.o
+/usr/bin/c++ -DCXX_SUPPORTS_STRING_CONVERSION_FLAG  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment    -Werror -Wstring-conversion -std=c++14 -o CMakeFiles/cmTC_a8fb5.dir/src.cxx.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wstring-conversion'; did you mean '-Wsign-conversion'?
+gmake[1]: *** [CMakeFiles/cmTC_a8fb5.dir/build.make:85: CMakeFiles/cmTC_a8fb5.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a8fb5/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Determining if the os_signpost_interval_begin exist failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_e1ece/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e1ece.dir/build.make CMakeFiles/cmTC_e1ece.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1ece.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-comment  -o CMakeFiles/cmTC_e1ece.dir/CheckSymbolExists.c.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: os/signpost.h: No such file or directory
+    2 | #include <os/signpost.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_e1ece.dir/build.make:85: CMakeFiles/cmTC_e1ece.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_e1ece/fast] Error 2
+
+
+File /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <os/signpost.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef os_signpost_interval_begin
+  return ((int*)(&os_signpost_interval_begin))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG failed with the following output:
+Change Dir: /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_156aa/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_156aa.dir/build.make CMakeFiles/cmTC_156aa.dir/build
+gmake[1]: Entering directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_156aa.dir/src.cxx.o
+/usr/bin/c++ -DCXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG  -fPIC -fvisibility-inlines-hidden -Werror=date-time -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -Wimplicit-fallthrough -Wno-class-memaccess -Wno-redundant-move -Wno-noexcept-type -Wdelete-non-virtual-dtor -Wsuggest-override -Wno-comment -fno-common -Woverloaded-virtual -fno-strict-aliasing -pedantic -Wno-long-long    -Werror -Wnested-anon-types -std=c++14 -o CMakeFiles/cmTC_156aa.dir/src.cxx.o -c /mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wnested-anon-types'
+gmake[1]: *** [CMakeFiles/cmTC_156aa.dir/build.make:85: CMakeFiles/cmTC_156aa.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/mnt/DataLinux/diploma/llvm-project/clang/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_156aa/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

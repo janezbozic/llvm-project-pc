@@ -99,13 +99,26 @@ public:
       if (LatchCmpInst == nullptr)
         continue;
 
+      Function *F = L->getHeader()->getModule()->getFunction("PERFORATION_FUNCTION");
+
+      std::vector<Value *> Args;
+      for(Function::arg_iterator i =
+          F->arg_begin(), e = F->arg_end(); i != e; ++i)
+      {
+        Args.push_back(i);
+      }
+
       //Getting global variable's address for perforation factor
       GlobalValue *b = L->getHeader()->getModule()->getNamedGlobal("CLANG_PERFORATION_RATE");
 
       LoadInst *loadInst;
-      if (b)
-        //We have to load global variable from attained address
-        loadInst = new LoadInst(b->getValueType(), b, "", L->getLoopPreheader()->getTerminator());
+      if (b) {
+        // We have to load global variable from attained address
+        loadInst = new LoadInst(b->getValueType(), b, "",
+                                L->getLoopPreheader()->getTerminator());
+        //CallInst *NewCall =
+        CallInst::Create(F, Args, "PERFORATION_FUNCTION", loadInst);
+      }
       else
         return false; //Return false if global variable does not exist in the program
 

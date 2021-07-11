@@ -116,7 +116,7 @@ public:
         // We have to load global variable from attained address
         //loadInst = new LoadInst(b->getValueType(), b, "",
         //                        L->getLoopPreheader()->getTerminator());
-        NewCall = CallInst::Create(F, Args, "", L->getLoopPreheader()->getTerminator());
+        NewCall = CallInst::Create(F, Args, "PERFORATION_FUNCTION_CALL", L->getLoopPreheader()->getTerminator());
       }
       else
         return false; //Return false if global variable does not exist in the program

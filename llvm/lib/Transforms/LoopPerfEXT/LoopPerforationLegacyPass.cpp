@@ -117,7 +117,7 @@ public:
         loadInst = new LoadInst(b->getValueType(), b, "",
                                 L->getLoopPreheader()->getTerminator());
         //CallInst *NewCall =
-        CallInst::Create(F, Args, "PERFORATION_FUNCTION", loadInst);
+        CallInst::Create(F, Args, "", loadInst);
       }
       else
         return false; //Return false if global variable does not exist in the program

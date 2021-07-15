@@ -20,6 +20,8 @@
 using namespace clang::CodeGen;
 using namespace llvm;
 
+static int perfLoopCount = 1;
+
 MDNode *
 LoopInfo::createLoopPropertiesMetadata(ArrayRef<Metadata *> LoopProperties) {
   LLVMContext &Ctx = Header->getContext();
@@ -393,10 +395,14 @@ MDNode *LoopInfo::createFullUnrollMetadata(const LoopAttributes &Attrs,
     Args.append(LoopProperties.begin(), LoopProperties.end());
 
     if (Attrs.Perforate) {
-      Metadata *Vals[] = {MDString::get(Ctx, "llvm.loop.perforate.enable")};
+      Metadata *Vals[] = {MDString::get(Ctx, "llvm.loop.perforate.enable"),
+                          ConstantAsMetadata::get(ConstantInt::get(
+                            llvm::Type::getInt32Ty(Ctx), perfLoopCount))};
 
       Args.push_back(MDNode::get(Ctx, Vals));
       LoopProperties = Args;
+
+      perfLoopCount++;
     }
 
 
@@ -416,7 +422,11 @@ MDNode *LoopInfo::createFullUnrollMetadata(const LoopAttributes &Attrs,
   Args.push_back(MDNode::get(Ctx, MDString::get(Ctx, "llvm.loop.unroll.full")));
 
   if (Attrs.Perforate) {
-    Metadata *Vals[] = {MDString::get(Ctx, "llvm.loop.perforate.enable")};
+    Metadata *Vals[] = {MDString::get(Ctx, "llvm.loop.perforate.enable"),
+                        ConstantAsMetadata::get(ConstantInt::get(
+                            llvm::Type::getInt32Ty(Ctx), perfLoopCount))};
+
+    perfLoopCount++;
 
     Args.push_back(MDNode::get(Ctx, Vals));
   }

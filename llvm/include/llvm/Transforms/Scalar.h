@@ -336,7 +336,7 @@ FunctionPass *createMemCpyOptPass();
 
 Pass *createLoopPerforationLegacyPass();
 
-bool GetPerforationMetadata(MDNode *LoopID, StringRef Name);
+int GetPerforationMetadata(MDNode *LoopID, StringRef Name);
 
 //===----------------------------------------------------------------------===//
 //

@@ -36,12 +36,12 @@ public:
   //  then we return true.
   bool runOnLoop(Loop *L, LPPassManager &) override {
 
-    bool LoopPerfEnabled = false;
+    int LoopPerfEnabled = 0;
     //Check if perforation is enabled for the loop
     if (MDNode *LoopID = L->getLoopID())
       LoopPerfEnabled = GetPerforationMetadata(LoopID, "llvm.loop.perforate.enable");
 
-    if (!LoopPerfEnabled)
+    if (LoopPerfEnabled == 0)
       return false;
 
     //We check if the loop is simple, if it is not, we can't perform perforation
@@ -109,6 +109,10 @@ public:
       {
         Args.push_back(i);
       }
+
+      Constant *NewInc = ConstantInt::get(Type::getInt32Ty(L->getHeader()->getContext()), LoopPerfEnabled /*value*/, true /*issigned*/);
+
+      Args.push_back(NewInc);
 
       //LoadInst *loadInst;
       CallInst *NewCall;
@@ -201,7 +205,7 @@ INITIALIZE_PASS_END(LoopPerforationLegacyPass, "loop-perforation",
 
 //Method for retrieving loop's metadata set with pragma instruction
 //   #pragma clang loop perforate
-bool llvm::GetPerforationMetadata(MDNode *LoopID, StringRef Name) {
+int llvm::GetPerforationMetadata(MDNode *LoopID, StringRef Name) {
   // First operand should refer to the loop id itself.
   assert(LoopID->getNumOperands() > 0 && "requires at least one operand");
   assert(LoopID->getOperand(0) == LoopID && "invalid loop id");
@@ -216,10 +220,10 @@ bool llvm::GetPerforationMetadata(MDNode *LoopID, StringRef Name) {
       continue;
 
     if (Name.equals(S->getString())) {
-      return true;
+      return mdconst::extract<ConstantInt>(MD->getOperand(1))->getZExtValue();
     }
   }
-  return false;
+  return 0;
 }
 
 

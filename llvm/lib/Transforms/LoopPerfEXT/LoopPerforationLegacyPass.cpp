@@ -101,14 +101,14 @@ public:
 
       //Getting global variable's address for perforation factor
       //GlobalValue *b = L->getHeader()->getModule()->getNamedGlobal("CLANG_PERFORATION_RATE");
-      Function *F = L->getHeader()->getModule()->getFunction("PERFORATION_FUNCTION");
+      FunctionCallee F = L->getHeader()->getModule()->getOrInsertFunction("PERFORATION_FUNCTION", Type::getInt32Ty(L->getHeader()->getContext()));
 
       std::vector<Value *> Args;
-      for(Function::arg_iterator i =
+/*      for(Function::arg_iterator i =
           F->arg_begin(), e = F->arg_end(); i != e; ++i)
       {
         Args.push_back(i);
-      }
+      }*/
 
       Constant *NewInc = ConstantInt::get(Type::getInt32Ty(L->getHeader()->getContext()), LoopPerfEnabled /*value*/, true /*issigned*/);
 

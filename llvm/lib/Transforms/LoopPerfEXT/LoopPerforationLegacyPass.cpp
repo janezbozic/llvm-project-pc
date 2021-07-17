@@ -99,20 +99,28 @@ public:
       if (LatchCmpInst == nullptr)
         continue;
 
+      Type* int32Ty = Type::getInt32Ty(L->getHeader()->getContext());
+
+      Type*CreateArgs[] = {int32Ty};
+
+      FunctionType* PerfFunCreateTy = FunctionType::get(int32Ty,
+                                                        ArrayRef<Type*>(CreateArgs,1),
+                                                        false);
+
       //Getting global variable's address for perforation factor
       //GlobalValue *b = L->getHeader()->getModule()->getNamedGlobal("CLANG_PERFORATION_RATE");
-      FunctionCallee F = L->getHeader()->getModule()->getOrInsertFunction("PERFORATION_FUNCTION", Type::getInt32Ty(L->getHeader()->getContext()));
+      FunctionCallee F = L->getHeader()->getModule()->getOrInsertFunction("PERFORATION_FUNCTION", PerfFunCreateTy);
 
-      std::vector<Value *> Args;
+      std::vector<Value *> CallArgs;
 /*      for(Function::arg_iterator i =
           F->arg_begin(), e = F->arg_end(); i != e; ++i)
       {
-        Args.push_back(i);
+        CallArgs.push_back(i);
       }*/
 
       Constant *NewInc = ConstantInt::get(Type::getInt32Ty(L->getHeader()->getContext()), LoopPerfEnabled /*value*/, true /*issigned*/);
 
-      Args.push_back(NewInc);
+      CallArgs.push_back(NewInc);
 
       //LoadInst *loadInst;
       CallInst *NewCall;
@@ -120,7 +128,7 @@ public:
         // We have to load global variable from attained address
         //loadInst = new LoadInst(b->getValueType(), b, "",
         //                        L->getLoopPreheader()->getTerminator());
-        NewCall = CallInst::Create(F, Args, "PERFORATION_FUNCTION_CALL", L->getLoopPreheader()->getTerminator());
+        NewCall = CallInst::Create(F, CallArgs, "PERFORATION_FUNCTION_CALL", L->getLoopPreheader()->getTerminator());
       }
       else
         return false; //Return false if global variable does not exist in the program

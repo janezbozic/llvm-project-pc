@@ -101,10 +101,10 @@ public:
 
       Type* int32Ty = Type::getInt32Ty(L->getHeader()->getContext());
 
-      Type*CreateArgs[] = {int32Ty};
+      Type*CreateArgs[] = {int32Ty, int32Ty};
 
       FunctionType* PerfFunCreateTy = FunctionType::get(int32Ty,
-                                                        ArrayRef<Type*>(CreateArgs,1),
+                                                        ArrayRef<Type*>(CreateArgs,2),
                                                         false);
 
       //Getting global variable's address for perforation factor
@@ -120,7 +120,7 @@ public:
 
       Constant *NewInc = ConstantInt::get(Type::getInt32Ty(L->getHeader()->getContext()), LoopPerfEnabled /*value*/, true /*issigned*/);
 
-      CallArgs.push_back(NewInc);
+      CallArgs.push_back(NewInc, IVFinalVal);
 
       //LoadInst *loadInst;
       CallInst *NewCall;

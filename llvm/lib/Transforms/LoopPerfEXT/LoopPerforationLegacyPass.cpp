@@ -119,8 +119,11 @@ public:
       }*/
 
       Constant *NewInc = ConstantInt::get(Type::getInt32Ty(L->getHeader()->getContext()), LoopPerfEnabled /*value*/, true /*issigned*/);
+      CallArgs.push_back(NewInc);
 
-      CallArgs.push_back(NewInc, IVFinalVal);
+      if (Constant* CI = dyn_cast<ConstantInt>(&IVFinalVal)) {
+        CallArgs.push_back(CI);
+      }
 
       //LoadInst *loadInst;
       CallInst *NewCall;
